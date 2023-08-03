@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+       .child{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin: auto;
+            padding: 50px;
+       }
+    </style>
+    <script>
+        var start = document.getElementById("startDate").value;
+        var end = document.getElementById("endDate").value;
+       function SubmitClick()
+       {
+        document.getElementById("para1").innerHTML = start;
+        document.getElementById("para2").innerHTML = end;
+       }
+        
+
+    </script>
+</head>
+<body>
+    <div class="parent">
+        <div class="child shadow border border-1">
+            <div style="margin: 0 40px 0 0;">
+                <label class="mb-1">starting date :</label>
+                <input type="date" class="form-control" id="startDate">
+            </div>
+            <div style="margin: 0 40px 0 0;">
+                <label class="mb-1">ending date :</label>
+                <input type="date" class="form-control" id="endDate">
+            </div>
+            <div style="margin: 0 40px 0 0;>
+                <label class="mb-1">Select date :</label>
+                <input type="date" class="form-control" min="start" max="end">
+            </div>
+            <div>
+                <input type="button" class="btn btn-primary" value="Submit" onclick="SubmitClick()">
+                <p id="para1"></p>
+                <p id="para2"></p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
